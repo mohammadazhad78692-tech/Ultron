@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ultron_a11y_desc">Lets ULTRON press Home/Back, tap, scroll and type, only when you give it a voice command. It does not record or send screen content anywhere.</string>
+</resources>
