@@ -38,6 +38,9 @@ perms = '''
     </queries>
 '''
 s = s.replace('<application', perms + '\n    <application', 1)
+# Capacitor's template already sets allowBackup; remove it first or the manifest has a duplicate attribute
+s = re.sub(r'\s*android:allowBackup="[^"]*"', '', s)
+s = re.sub(r'\s*android:usesCleartextTraffic="[^"]*"', '', s)
 s = s.replace('<application', '<application android:allowBackup="false" android:usesCleartextTraffic="false"', 1)
 service = '''
         <service
